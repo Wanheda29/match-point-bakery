@@ -34,7 +34,7 @@ test("resume el contenido del respaldo", () => {
 test("los datos anteriores sin historial de ajustes siguen siendo válidos", () => {
   const old = sample();
   delete old.stockAdjustments;
-  const restored = parseBackup(JSON.stringify({ application: "Dulce Gestión", schemaVersion: 1, data: old }));
+  const restored = parseBackup(JSON.stringify({ application: "Match Point Bakery", schemaVersion: 1, data: old }));
   assert.deepEqual(restored.data.stockAdjustments, []);
 });
 

@@ -1,4 +1,4 @@
-# Dulce Gestión
+# Match Point Bakery
 
 MVP web responsive para calcular costos, registrar compras, crear recetas y guardar ventas de una pastelería por encargo.
 
@@ -41,4 +41,14 @@ La aplicación no necesita compilación: se puede publicar la raíz del reposito
 
 ## Conexión con Supabase
 
-GitHub Pages no tiene autenticación ni base de datos. Esta app usa el proyecto Supabase `esjxcfdgseiayalrwhhg`; el esquema y la primera cuenta ya están configurados. La conexión está activada para la prueba de inicio de sesión. Los datos que se cargaron previamente en el navegador eran pruebas y **no se suben automáticamente**. El respaldo descargado se conserva por separado.
+Esta copia usa exclusivamente el proyecto Supabase `hrcbprhmwqmymobxumao`. La URL y la clave pública están configuradas en `cloud-config.js`. El almacenamiento local y la caché tienen un identificador propio. No se copiaron datos ni usuarios del negocio original.
+
+Estado de la instalación (29/09/2026):
+
+- Esquema aplicado: tablas `businesses`, `memberships` y `business_data`, con RLS habilitado, funciones de sincronización y políticas de acceso del original.
+- Negocio `Match Point Bakery` creado y activo, sin datos comerciales. ID: `ced686f3-9c12-4930-afca-161c1b565809`.
+- Pendiente: crear la cuenta de la persona administradora y asociarla con `supabase/setup-business.sql`, completando el correo. Este script reutiliza el negocio creado.
+- Pendiente: verificar inicio de sesión y guardado/lectura desde esa cuenta.
+
+`supabase/schema.sql` es para una instalación nueva: no volver a ejecutarlo en este proyecto, donde ya se aplicó.
+Origen del código: `Wanheda29/dulce-gestion`, commit `86f8b4e12e5aa97137e70b6600f288ec6d6bd2c7`.

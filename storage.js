@@ -1,4 +1,4 @@
-const STORAGE_KEY = "dulce-gestion-v1";
+const STORAGE_KEY = "dulce-gestion-hrcbprhmwqmymobxumao-v1";
 export const CURRENT_SCHEMA_VERSION = 2;
 
 export const emptyState = {
@@ -52,7 +52,7 @@ export function exportState(state) {
   const date = new Date();
   const localDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
   link.href = objectUrl;
-  link.download = `dulce-gestion-${localDate}.json`;
+  link.download = `match-point-bakery-${localDate}.json`;
   document.body.append(link);
   link.click();
   link.remove();
@@ -61,7 +61,7 @@ export function exportState(state) {
 
 export function createBackup(state, exportedAt = new Date().toISOString()) {
   return {
-    application: "Dulce Gestión",
+    application: "Match Point Bakery",
     schemaVersion: CURRENT_SCHEMA_VERSION,
     exportedAt,
     data: normalizeState(state),
@@ -75,9 +75,9 @@ export function parseBackup(text) {
   } catch {
     throw new Error("El archivo no contiene JSON válido.");
   }
-  const isEnvelope = parsed?.application === "Dulce Gestión" || Object.hasOwn(parsed ?? {}, "schemaVersion");
+  const isEnvelope = parsed?.application === "Match Point Bakery" || Object.hasOwn(parsed ?? {}, "schemaVersion");
   if (isEnvelope) {
-    if (parsed.application !== "Dulce Gestión") throw new Error("El archivo pertenece a otra aplicación.");
+    if (parsed.application !== "Match Point Bakery") throw new Error("El archivo pertenece a otra aplicación.");
     if (!Number.isInteger(parsed.schemaVersion) || parsed.schemaVersion < 1) throw new Error("La versión del respaldo no es válida.");
     if (parsed.schemaVersion > CURRENT_SCHEMA_VERSION) throw new Error("El respaldo fue creado con una versión más nueva de la aplicación.");
     return { data: normalizeState(parsed.data), schemaVersion: parsed.schemaVersion, exportedAt: parsed.exportedAt || null, legacy: false };
