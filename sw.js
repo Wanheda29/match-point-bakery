@@ -1,10 +1,10 @@
 const CACHE_PREFIX = "dulce-gestion-hrcbprhmwqmymobxumao-";
-const CACHE = `${CACHE_PREFIX}v3`;
-const ASSETS = ["./", "./index.html", "./styles.css", "./app.js", "./domain.js", "./storage.js", "./cloud.js", "./cloud-config.js", "./manifest.webmanifest", "./tennis-ball.svg", "./tennis-bakery.svg"];
+const CACHE = `${CACHE_PREFIX}v4`;
+const ASSETS = ["./", "./index.html", "./styles.css?v=tennis-4", "./app.js?v=tennis-4", "./domain.js", "./storage.js", "./cloud.js", "./cloud-config.js", "./manifest.webmanifest", "./tennis-ball.svg", "./tennis-bakery.svg"];
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS)));
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(ASSETS.map((url) => new Request(url, { cache: "reload" })))));
 });
 self.addEventListener("activate", (event) => event.waitUntil(Promise.all([
   self.clients.claim(),
