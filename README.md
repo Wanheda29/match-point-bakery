@@ -49,9 +49,10 @@ Estado de la instalación (29/09/2026):
 
 - Esquema aplicado: tablas `businesses`, `memberships` y `business_data`, con RLS habilitado, funciones de sincronización y políticas de acceso del original.
 - Negocio `Match Point Bakery` creado y activo, sin datos comerciales. ID: `ced686f3-9c12-4930-afca-161c1b565809`.
-- Pendiente: crear la cuenta de la persona administradora y asociarla con `supabase/setup-business.sql`, completando el correo. Este script reutiliza el negocio creado.
+- Cuenta de la persona administradora creada, confirmada y asociada a Match Point Bakery.
 - Sitio publicado en GitHub Pages y URL configurada en Supabase. Clave pública verificada (HTTP 200); acceso anónimo a datos rechazado (HTTP 401).
-- Pendiente: verificar inicio de sesión y guardado/lectura desde esa cuenta.
+- Guardado y lectura verificados con el rol authenticated y la identidad de la cuenta en una transacción revertida. La base mantiene cero registros comerciales.
+- Pendiente únicamente la comprobación de inicio de sesión por la persona usuaria con su contraseña.
 
 `supabase/schema.sql` es para una instalación nueva: no volver a ejecutarlo en este proyecto, donde ya se aplicó.
 Origen del código: `Wanheda29/dulce-gestion`, commit `86f8b4e12e5aa97137e70b6600f288ec6d6bd2c7`.
