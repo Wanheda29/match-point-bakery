@@ -43,11 +43,11 @@ main { min-width: 0; }
 .hero h2 { max-width: 650px; font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.02; margin: 8px 0 16px; }
 .hero p { color: var(--muted); max-width: 650px; line-height: 1.6; }
 .hero > div { min-width: 0; }
-.tennis-detail { flex: 0 0 200px; margin: 0; text-align: center; }
+.tennis-detail { flex: 0 0 200px; width: 200px; max-width: 100%; margin: 0; text-align: center; }
 .tennis-detail img { display: block; width: 100%; height: auto; }
 .tennis-detail figcaption { margin-top: 8px; color: #365b44; font-family: Georgia, serif; font-style: italic; font-size: .95rem; }
 @media (max-width: 1100px) { .tennis-detail { flex-basis: 140px; } }
-@media (max-width: 640px) { .hero { flex-wrap: wrap; } .tennis-detail { flex: 0 0 130px; margin-inline: auto; } }
+@media (max-width: 640px) { .hero { flex-wrap: wrap; } .tennis-detail { flex: 0 0 130px; width: 130px; margin: 24px auto 0; } }
 .hero-actions, .page-actions, .form-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin: 22px 0; }
 .stat, .card { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 8px 28px rgba(75,48,57,.05); }
