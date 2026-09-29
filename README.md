@@ -1,5 +1,7 @@
 # Match Point Bakery
 
+[Abrir la aplicación](https://wanheda29.github.io/match-point-bakery/).
+
 MVP web responsive para calcular costos, registrar compras, crear recetas y guardar ventas de una pastelería por encargo.
 
 ## Ejecutar localmente
@@ -48,6 +50,7 @@ Estado de la instalación (29/09/2026):
 - Esquema aplicado: tablas `businesses`, `memberships` y `business_data`, con RLS habilitado, funciones de sincronización y políticas de acceso del original.
 - Negocio `Match Point Bakery` creado y activo, sin datos comerciales. ID: `ced686f3-9c12-4930-afca-161c1b565809`.
 - Pendiente: crear la cuenta de la persona administradora y asociarla con `supabase/setup-business.sql`, completando el correo. Este script reutiliza el negocio creado.
+- Sitio publicado en GitHub Pages y URL configurada en Supabase. Clave pública verificada (HTTP 200); acceso anónimo a datos rechazado (HTTP 401).
 - Pendiente: verificar inicio de sesión y guardado/lectura desde esa cuenta.
 
 `supabase/schema.sql` es para una instalación nueva: no volver a ejecutarlo en este proyecto, donde ya se aplicó.
