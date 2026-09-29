@@ -190,6 +190,7 @@ function renderDashboard() {
   app.innerHTML = `
     <section class="hero">
       <div><p class="eyebrow">Tu negocio, con números claros</p><h2>Sabé cuánto cuesta antes de ponerle precio.</h2><p>Registrá compras, armá recetas y conservá el costo real de cada venta. Los gastos de gas, luz, reparto y trabajo siempre son opcionales.</p><div class="hero-actions"><button class="primary" data-go="pedidos">Nuevo pedido</button><button class="secondary" data-go="agenda">Ver agenda</button></div></div>
+      <figure class="tennis-detail"><img src="tennis-bakery.svg" alt="Cupcake con una pelota de tenis sobre una pequeña cancha" width="240" height="260" /><figcaption>El lado dulce del match point.</figcaption></figure>
     </section>
     <div class="stats">
       <article class="stat"><small>Ventas del mes</small><strong>${money.format(summary.revenue)}</strong></article>

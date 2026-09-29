@@ -1,6 +1,6 @@
 const CACHE_PREFIX = "dulce-gestion-hrcbprhmwqmymobxumao-";
-const CACHE = `${CACHE_PREFIX}v1`;
-const ASSETS = ["./", "./index.html", "./styles.css", "./app.js", "./domain.js", "./storage.js", "./cloud.js", "./cloud-config.js", "./manifest.webmanifest"];
+const CACHE = `${CACHE_PREFIX}v2`;
+const ASSETS = ["./", "./index.html", "./styles.css", "./app.js", "./domain.js", "./storage.js", "./cloud.js", "./cloud-config.js", "./manifest.webmanifest", "./tennis-ball.svg", "./tennis-bakery.svg"];
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
